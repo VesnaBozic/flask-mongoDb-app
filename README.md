@@ -25,6 +25,6 @@ About Flask
   
  SET FLASK_APP=python_file.py
  
- SET FLASN_ENV=development
+ SET FLASK_ENV=development
  
  flask run
