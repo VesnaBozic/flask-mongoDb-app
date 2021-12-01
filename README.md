@@ -25,6 +25,6 @@ About Flask
   
  SET FLASK_APP=python_file.py
  
- SET FLASK_ENV=development
+ SET FLASK_ENV=development    //this says debug mode, developer mode, so that we don't have to shout down server everytime to see changes.
  
  flask run
