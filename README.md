@@ -5,7 +5,7 @@ About Flask
  
  What is Flask?
  
- -Flask is a web microframework, it’s a Python module that lets you develop web applications. It’s doesn’t include an ORM (Object Relational Manager).
+ -Flask is a web microframework, it’s a Python module that lets you develop web applications. It’s doesn’t include an ORM (Object Relational Manager).Flask has a built-in server that will allow us to turn our Python scripts into webpages and web apps. Flask allows us to make websites with Python. 
  
  How to install virtual environment:
  
