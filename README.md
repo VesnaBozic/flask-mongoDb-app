@@ -57,3 +57,19 @@ the @app.route decorator creates an association between the URL given as an argu
 -route() decorator will tell Flask what URL should trigger our function.
 
 The function returns the message we want to display in the user’s browser. The default content type is HTML, so HTML in the string will be rendered by the browser.
+
+## What are templates?
+
+Templates help achieve separation between presentation and business logic. In Flask, templates are written as separate files, stored in a templates folder that is inside the application package.
+
+## What is rendering?
+
+The operation that converts a template into a complete HTML page is called rendering. To render the template we had to import a function that comes with the Flask framework called render_template(). This function takes a template filename and a variable list of template arguments and returns the same template, but with all the placeholders in it replaced with actual values.
+
+The render_template() function invokes the Jinja2 template engine that comes bundled with the Flask framework. Jinja2 substitutes {{ ... }} blocks with the corresponding values, given by the arguments provided in the render_template() call.
+
+
+
+
+
+
