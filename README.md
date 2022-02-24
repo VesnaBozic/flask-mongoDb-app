@@ -69,6 +69,14 @@ The operation that converts a template into a complete HTML page is called rende
 The render_template() function invokes the Jinja2 template engine that comes bundled with the Flask framework. Jinja2 substitutes {{ ... }} blocks with the corresponding values, given by the arguments provided in the render_template() call.
 
 
+## We run this
+
+```
+pip freeze > requirements
+
+```
+
+to save all packeges that we installed in a file.
 
 
 
