@@ -78,6 +78,12 @@ pip freeze > requirements
 
 to save all packeges that we installed in a file.
 
+## url_for 
 
+url_for is function in the Flask flask.helpers module. url_for generates a URL to an endpoint using the method passed in as an argument.
+
+### What is an endpoint Flask?
+
+The ***"endpoint"*** is an identifier that is used in determining what logical unit of your code should handle the request. Normally, an endpoint is just the name of a view function
 
 
