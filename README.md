@@ -86,4 +86,22 @@ url_for is function in the Flask flask.helpers module. url_for generates a URL t
 
 The ***"endpoint"*** is an identifier that is used in determining what logical unit of your code should handle the request. Normally, an endpoint is just the name of a view function
 
+## ROUTING
+
+Modern web applications use meaningful URLs to help users. Users are more likely to like a page and come back if the page uses a meaningful URL they can remember and use to directly visit a page.
+
+Use the route() decorator to bind a function to a URL.
+
+```
+@app.route('/')
+def index():
+    return 'Index Page'
+
+@app.route('/hello')
+def hello():
+    return 'Hello, World'
+```
+
+
+
 
