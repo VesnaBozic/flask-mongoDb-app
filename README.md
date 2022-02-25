@@ -32,7 +32,6 @@ Flask is a web microframework, it’s a Python module that lets you develop web 
  
  # Flask app
  
- ![hello world](/assets/img/hello.jpg)
  
  In this code snippet we see small Flask application. 
  ``` 
