@@ -6,24 +6,38 @@
 
  ## How to install virtual environment:
  
- ```python -m venv```
+ ```
+ python -m venv
+ ```
  
  ## How to run Flask:
  
  
  ### Install Flask in python virtual environment
  
- ```python -m pip install flask```
+ ```
+ python -m pip install flask
+  ```
 
 
  
  ### How to activate virtual environment:
  
- ```path\name\scripts\activate```
+ ```
+ path\name\scripts\activate
+ ```
 
 ### Install Flask enxtension for MongoDb
 
-```pip install flask-mongoengine
+```
+pip install flask-mongoengine
+```
+
+### Flask Security Extension and Flask WTF
+
+```
+pip install flask-wtf flask-security
+
 ```
 
  
@@ -41,7 +55,8 @@
  
 ## To save all packeges that we installed in a file :
 
-```pip freeze > requirements
+```
+pip freeze > requirements
 ```
 
 
