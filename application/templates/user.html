@@ -1,0 +1,23 @@
+{% extends "baseTemplate.html" %}
+<!-- with this command we inherit base_template page -->
+
+{% block content %}
+<!-- with this command we are going to inject this code in base_tamplate -->
+    <div class="row">
+        <div class="col-md-12 text-center">
+            {% for user in users %}
+            
+         
+            <dl>
+                <dt>User ID: {{user.id}}</dt>
+                <dd>Email: {{user.email}}</dd>
+                <dd>Password: {{user.password}}</dd>
+            </dl>
+            {% else %}
+            <h3>No users</h3>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

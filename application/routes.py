@@ -1,4 +1,4 @@
-from application import app
+from application import app, db
 from flask import render_template, request, json, Response
 
 classes = [ {"courseID":"1111","title":"PY 101","description":"Intro to Python","credits":3,"term":"Fall, Spring"},
@@ -52,6 +52,26 @@ def api(index=None):
         jdata = classes[int(index)]
 
     return Response(json.dumps(jdata), mimetype = "application\json")
+
+
+class User(db.Document):
+    user_id     =   db.IntField( unique=True )
+    first_name  =   db.StringField( max_length=50 )
+    last_name   =   db.StringField( max_length=50 )
+    email       =   db.StringField( max_length=30 )
+    password    =   db.StringField( max_length=30 )
+
+@app.route("/user")
+def user():
+    # User(user_id=1, first_name="Vesna", last_name="Bozic", email="86veja@gmail.com", password="vesna").save()
+    # User(user_id=4, first_name="Vaso", last_name="Boz", email="vaso@gmail.com", password="vaso").save()
+    # User(user_id=5, first_name="Ana", last_name="Anic", email="ana@gmail.com", password="ana").save()
+     users = User.objects.all()
+     print(users)
+     return render_template("user.html", users=users)
+
+
+
 
 
 
