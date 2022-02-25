@@ -53,7 +53,7 @@ pip install flask-wtf flask-security
 
 
  
-## To save all packeges that we installed in a file :
+## To check all packeges installed:
 
 ```
 pip freeze > requirements
