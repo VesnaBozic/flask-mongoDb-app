@@ -43,7 +43,12 @@ Flask is a web microframework, it’s a Python module that lets you develop web 
  
  **__name__** variable passed to the Flask class is a Python predefind variable and it configures FLask in the correct way. This is needed so that Flask knows where to look for resources such as templates and static files.
  
- **the routes** are the different URLs that the application implements
+## ROUTING
+
+Modern web applications use meaningful URLs to help users. Users are more likely to like a page and come back if the page uses a meaningful URL they can remember and use to directly visit a page.
+
+
+**the routes** are the different URLs that the application implements
  
  In Flask, handlers for the application routes are written as Python functions, called **view functions**
   
@@ -57,6 +62,19 @@ the @app.route decorator creates an association between the URL given as an argu
 -route() decorator will tell Flask what URL should trigger our function.
 
 The function returns the message we want to display in the user’s browser. The default content type is HTML, so HTML in the string will be rendered by the browser.
+
+
+Use the route() decorator to bind a function to a URL.
+
+```
+@app.route('/')
+def index():
+    return 'Index Page'
+
+@app.route('/hello')
+def hello():
+    return 'Hello, World'
+```
 
 ## What are templates?
 
@@ -86,21 +104,7 @@ url_for is function in the Flask flask.helpers module. url_for generates a URL t
 
 The ***"endpoint"*** is an identifier that is used in determining what logical unit of your code should handle the request. Normally, an endpoint is just the name of a view function
 
-## ROUTING
 
-Modern web applications use meaningful URLs to help users. Users are more likely to like a page and come back if the page uses a meaningful URL they can remember and use to directly visit a page.
-
-Use the route() decorator to bind a function to a URL.
-
-```
-@app.route('/')
-def index():
-    return 'Index Page'
-
-@app.route('/hello')
-def hello():
-    return 'Hello, World'
-```
 
 
 
