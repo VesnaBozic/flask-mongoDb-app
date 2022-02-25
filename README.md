@@ -1,4 +1,4 @@
-# How to set environment for this app
+# How to set environment and run this app
 
  
  [**Link to Flask documentation**](https://flask.palletsprojects.com/en/2.0.x/)
