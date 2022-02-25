@@ -5,15 +5,13 @@
 <!-- with this command we are going to inject this code in base_tamplate -->
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>Welcome to Flask Project.</h1>
-            {% if login%}
-            <h3>Let's get started.</h3>
-            {% else %}
-            <p>Already registered? <a href="{{url_for('login')}}">Login</a></p>
-            {% endif %}    
+            <h1>You are enrolled in : </h1>
+
+            <p>Course ID: {{ course.id}}</p>
+            <p>Course Title : {{ course.title }}</p>
+            <p>Couse Term: {{ course.term }}</p>
+     
         </div>
     </div>
 
 {% endblock %}
-
-
