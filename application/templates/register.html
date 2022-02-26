@@ -5,16 +5,24 @@
     <h2>New User Registration</h2>
 
     <div class="container">
-        <form name="register" action="" method="post">
- 
+        <form name="register" action="" method="post" novalidate>
+             {{registration.hidden_tag()}}
 
             <p>
                 {{ registration.email.label}} <br>
                 {{ registration.email(size=35)}}
+                {% for error in registration.email.errors %}
+                    <span class="error-message">{{ error }}</span>
+
+                    {% endfor %}
             </p>
             <p>
                 {{ registration.password.label}} <br>
                 {{ registration.password(size=15)}}
+                {% for error in registration.password.errors %}
+                <span class="error-message">{{ error }}</span>
+
+                {% endfor %}
             </p>
             <p>
                 {{ registration.password_confirm.label}} <br>

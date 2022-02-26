@@ -1,5 +1,5 @@
 #this is configuration module to store some major configurations that
-# we use across the application/
+# we use across the application
 
 import os
 
