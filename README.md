@@ -3,6 +3,8 @@
  
  [**Link to Flask documentation**](https://flask.palletsprojects.com/en/2.0.x/)
  
+ [**Link to MongoDB installation**](https://www.mongodb.com/try/download/community)
+ 
 
  ## How to install virtual environment:
  
