@@ -1,5 +1,8 @@
 from application import app, db
 from flask import render_template, request, json, Response
+from application.models import User,Course, Enrollment
+from application.forms import LoginForm, RegisterForm
+
 
 classes = [ {"courseID":"1111","title":"PY 101","description":"Intro to Python","credits":3,"term":"Fall, Spring"},
                 {"courseID":"2222","title":"Flask 1","description":"Intro to Flask","credits":4,"term":"Spring"}, 
@@ -21,13 +24,15 @@ def courses(term="Spring 2022"):
     # print(courses)
     return render_template("courses.html",  classes = classes, course = True, term = term)
 
-@app.route("/register")
+@app.route("/register", methods=['GET', 'POST'])
 def register():
-    return render_template("register.html", register= True)
+    registration = RegisterForm()
+    return render_template("register.html",registration=registration, register= True)
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
-    return render_template("login.html", login=True)
+    form = LoginForm()
+    return render_template("login.html",title = "Login", form = form, login=True)
 
 @app.route("/enrollment", methods =["GET", "POST"])
 def enrollment():
@@ -54,12 +59,6 @@ def api(index=None):
     return Response(json.dumps(jdata), mimetype = "application\json")
 
 
-class User(db.Document):
-    user_id     =   db.IntField( unique=True )
-    first_name  =   db.StringField( max_length=50 )
-    last_name   =   db.StringField( max_length=50 )
-    email       =   db.StringField( max_length=30 )
-    password    =   db.StringField( max_length=30 )
 
 @app.route("/user")
 def user():
@@ -69,6 +68,9 @@ def user():
      users = User.objects.all()
      print(users)
      return render_template("user.html", users=users)
+
+
+
 
 
 
