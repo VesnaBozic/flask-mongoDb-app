@@ -61,6 +61,19 @@ pip install flask-wtf flask-security
 pip freeze > requirements
 ```
 
+## Sessions and authentication
+
+Used ***Flask-Session Extension.*** The implementation is on top of the cookies and it also signs the cookies cryptographically, so it makes it very secure.
+
+Another way to do it is Flask Login. Flask login has more interaction with database, it connects directly to the database, so data comes directly to the backhend and front-end.
+
+To make Secret_Key secure use :
+```
+py -c "import os; print(os.urandom(16))"
+```
+
+
+
 
 
 
