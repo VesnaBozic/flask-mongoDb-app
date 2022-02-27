@@ -72,6 +72,13 @@ To make Secret_Key secure use :
 py -c "import os; print(os.urandom(16))"
 ```
 
+## Install Flask-RESTPlus extension
+
+```
+pip install flask-restplus
+```
+
+
 
 
 
