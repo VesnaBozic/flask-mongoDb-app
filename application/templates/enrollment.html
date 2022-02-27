@@ -5,12 +5,43 @@
 <!-- with this command we are going to inject this code in base_tamplate -->
     <div class="row">
         <div class="col-md-12 text-center">
+            {% if not classes %}
+
+            <h1>You are not enrolled in any course. </h1>
+
+           {% else %}
             <h1>You are enrolled in : </h1>
 
-            <p>Course ID: {{ course.id}}</p>
-            <p>Course Title : {{ course.title }}</p>
-            <p>Couse Term: {{ course.term }}</p>
-     
+            <div>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Course ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Credits</th>
+                        <th scope="col">Term</th>
+                     
+                    </tr>
+                    </thead>
+                    <tbody>
+        
+              
+                    {% for course in classes %}
+                    <tr>
+                         <!-- r2 is from pipline in database -->
+                        <td scope='row'>{{ course.r2["courseID"] }}</td>
+                        <td>{{ course.r2["title"] }}</td>
+                        <td>{{ course.r2["description"] }}</td>
+                        <td>{{ course.r2["credits"] }}</td>
+                        <td>{{ course.r2["term"] }}</td>
+                
+                    </tr>
+                   {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {%endif%}
         </div>
     </div>
 
