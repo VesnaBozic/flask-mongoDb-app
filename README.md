@@ -52,6 +52,12 @@ pip install flask-wtf flask-security
  
  flask run
  ```
+ 
+ ### How to run this app
+ 
+ ```
+ flask run
+ ```
 
 
  
